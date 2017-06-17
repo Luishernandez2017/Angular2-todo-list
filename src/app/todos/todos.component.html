@@ -1,0 +1,34 @@
+<h3 style="text-align:center;">Todo List</h3>
+<div *ngIf ="appState == 'default'">
+	
+<form class="form-group"(submit)="addTodo()">
+
+	<input type="submit" name="addBtn" value="add todo" style="background-color: transparent; border: none; color:limegreen; float:right; margin-right:10px;">
+	<div class="form-group ">
+	<input class="form-control " type="text" [(ngModel)]="text" name="text">
+	</div>
+</form>
+	
+</div><!--End of addTodo form-->
+
+
+<div *ngIf ="appState == 'edit'">
+	<form (submit)="updateTodo()">
+
+			<input type="submit" name="editBtn" value="edit todo" style="background-color: transparent; border: none; color:orange; float:right; margin-right:10px;">
+		<div class="form-group has-warning" id="edit">
+	<input class="form-control"type="text" [(ngModel)]="text" name="text">
+		</div>
+</form>
+	<br/>
+	</div><!--End of editTodo form-->
+
+<!--Display List-->
+	<ul class="list-group">
+<!--	ng foreach loop-->
+	<li class="list-group-item"*ngFor="let todo of todos">
+	<span (click)="editTodo(todo, $event)" style="cursor:pointer;">{{todo.text}}</span><button class="btn btn-danger btn-sm" style="float: right; margin-bottom: 5px; padding: 4px 10px;" (click)="deleteTodo(todo.text)"> X</button>
+	</li>
+
+
+</ul>
