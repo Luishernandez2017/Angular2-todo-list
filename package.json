@@ -44,5 +44,16 @@
     "ts-node": "~3.0.4",
     "tslint": "~5.3.2",
     "typescript": "~2.3.3"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luishernandez2017/Angular2-todo-list.git"
+  },
+  "author": "Luis Hernandez",
+  "bugs": {
+    "url": "https://github.com/Luishernandez2017/Angular2-todo-list/issues"
+  },
+  "homepage": "https://github.com/Luishernandez2017/Angular2-todo-list#readme"
 }
